@@ -21,7 +21,11 @@ body {
 }
 
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .valentines {
@@ -112,31 +116,16 @@ body {
   height: 0;
 }
 
-.btns {
+.btn i {
+  font-size: 50px;
+  color: rgb(248, 87, 87);
   position: absolute;
-  top: 286px;
-  left: 530px;
-  display: flex;
-  animation: up 3.5s linear infinite;
+  top: 50%;
+  left: 20px;
+  transform: translate(-50%, -50%);
 }
 
-.btn {
-  background: transparent;
-  border: none;
-  margin: 87px;
-  font-size: 88px;
-  outline: none;
-  color: grey;
-  transform: scale(0.7);
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  -o-transform: scale(0.7);
-}
 
-.btn i:hover {
-  cursor: pointer;
-}
 
 .shadow {
   position: absolute;
@@ -144,7 +133,7 @@ body {
   height: 40px;
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  bottom: 165px;
+  bottom: 23%;
   animation: scale 3s linear infinite;
   z-index: -1;
   -webkit-border-radius: 100%;
@@ -155,7 +144,7 @@ body {
 
 .gif-container {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   width: 30%;
   display: flex;
   justify-content: center;
@@ -163,6 +152,7 @@ body {
 }
 
 .gif-wrapper {
+  max-width: 100%;
   margin: 0 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -176,84 +166,6 @@ body {
   -ms-border-radius: 0;
   -o-border-radius: 0;
 }
-
-@media screen and (max-width: 420px) {
-  .gif-container {
-    width: 100%;
-  }
-
-  .shadow {
-    bottom: 150px;
-  }
-
-  .text {
-    left: 62px;
-  }
-
-  .btns {
-    top: 270px;
-    left: -23px;
-  }
-}
-
-
-@media screen and (max-width: 400px) {
-  .gif-container {
-    width: 100%;
-  }
-
-  .shadow {
-    bottom: 150px;
-  }
-
-  .text {
-    left: 62px;
-  }
-
-  .btns {
-    top: 246px;
-    left: -30px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .gif-container {
-    width: 100%;
-  }
-
-  .shadow {
-    bottom: 129px;
-  }
-
-  .text {
-    left: 62px;
-  }
-
-  .btns {
-    top: 224px;
-    left: -44px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .gif-container {
-    width: 100%;
-  }
-
-  .shadow {
-    bottom: 150px;
-  }
-
-  .text {
-    left: 62px;
-  }
-
-  .btns {
-    top: 275px;
-    left: -50px;
-  }
-}
-
 
 @keyframes up {
   0%,
@@ -277,4 +189,26 @@ body {
   50% {
     transform: scaleX(0.85);
   }
+}
+
+@media screen and (max-width: 840px) {
+  .gif-container {
+    width: 88%;
+  }
+  .shadow {
+    bottom: 30%;
+  }
+
+}
+@media screen and (max-width: 430px) {
+.gif-container {
+  width: 100%;
+  bottom: 3%;
+}
+
+  .shadow {
+    bottom: 20%;
+  }
+
+
 }
