@@ -30,17 +30,7 @@ $(document).ready(function () {
   });
 });
 
-var btnvar1 = document.getElementById("btnh1");
-
-function Toggle1() {
-  if (btnvar1.style.color == "rgb(240, 128, 128)") {
-    btnvar1.style.color = "grey";
-  } else {
-    btnvar1.style.color = "rgb(240, 128, 128)";
-  }
-}
-
-var audio = document.querySelector("audio");
+ar audio = document.querySelector("audio");
 var btnPlayPause = document.getElementById("btnh1");
 
 btnPlayPause.addEventListener("click", function () {
