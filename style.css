@@ -1,0 +1,280 @@
+/**
+ * General styles
+ *
+ * @format
+ */
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-color: #e17979ca;
+}
+
+.container {
+  position: relative;
+}
+
+.valentines {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+/* Style the envelope and the card */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: #f08080;
+}
+
+.envelope:before {
+  background-color: #f08080;
+  content: "";
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  transform: rotate(45deg);
+  top: -105px;
+  left: 44px;
+  border-radius: 30px 0 0 0;
+}
+
+.card {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 270px;
+  height: 190px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+}
+
+.section {
+  margin: auto;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 240px;
+  height: 165px;
+  left: 12px;
+  top: 12px;
+}
+
+.text {
+  position: absolute;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  text-align: center;
+  line-height: 25px;
+  top: 19px;
+  left: 55px;
+  color: #003049;
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f4978e;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 300px solid #f8ad9d;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+  width: 0;
+  height: 0;
+}
+
+.btns {
+  position: absolute;
+  top: 286px;
+  left: 530px;
+  display: flex;
+  animation: up 3.5s linear infinite;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  margin: 87px;
+  font-size: 88px;
+  outline: none;
+  color: grey;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+}
+
+.btn i:hover {
+  cursor: pointer;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 165px;
+  animation: scale 3s linear infinite;
+  z-index: -1;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.gif-container {
+  position: absolute;
+  bottom: 5px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-wrapper {
+  margin: 0 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gif-wrapper img {
+  width: 100%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+@media screen and (max-width: 420px) {
+  .gif-container {
+    width: 100%;
+  }
+
+  .shadow {
+    bottom: 150px;
+  }
+
+  .text {
+    left: 62px;
+  }
+
+  .btns {
+    top: 270px;
+    left: -23px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .gif-container {
+    width: 100%;
+  }
+
+  .shadow {
+    bottom: 150px;
+  }
+
+  .text {
+    left: 62px;
+  }
+
+  .btns {
+    top: 246px;
+    left: -30px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .gif-container {
+    width: 100%;
+  }
+
+  .shadow {
+    bottom: 129px;
+  }
+
+  .text {
+    left: 62px;
+  }
+
+  .btns {
+    top: 224px;
+    left: -44px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .gif-container {
+    width: 100%;
+  }
+
+  .shadow {
+    bottom: 150px;
+  }
+
+  .text {
+    left: 62px;
+  }
+
+  .btns {
+    top: 275px;
+    left: -50px;
+  }
+}
+
+
+@keyframes up {
+  0%,
+  10% {
+    transform: translateY(1);
+    -webkit-transform: translateY(1);
+    -moz-transform: translateY(1);
+    -ms-transform: translateY(1);
+    -o-transform: translateY(1);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.85);
+  }
+}
