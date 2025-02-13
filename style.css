@@ -54,7 +54,7 @@ body {
   position: absolute;
   background-color: #eae2b7;
   width: 270px;
-  height: 200px;
+  height: 195px;
   top: 5px;
   left: 15px;
   box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
@@ -68,7 +68,7 @@ body {
   width: 253px;
   height: 178px;
   left: 5px;
-  top: 10px;
+  top: 5px;
 }
 
 .text {
