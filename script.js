@@ -6,13 +6,13 @@ $(document).ready(function () {
   // Hide GIF initially
   $(".gif-container").hide();
 
-  $(".btns").click(function () {
+  $("#btnh1").click(function () {
     if (!isCardShown) {
       // Show GIF before animating the card
       $(".gif-container").show();
       $(".card").stop().animate(
         {
-          top: "-184px",
+          top: "-148px",
         },
         "slow"
       );
@@ -30,7 +30,8 @@ $(document).ready(function () {
   });
 });
 
-ar audio = document.querySelector("audio");
+
+var audio = document.querySelector("audio");
 var btnPlayPause = document.getElementById("btnh1");
 
 btnPlayPause.addEventListener("click", function () {
