@@ -1,9 +1,4 @@
-/**
- * General styles
- *
- * @format
- */
-
+/* General styles */
 * {
   text-decoration: none;
   margin: 0;
@@ -11,8 +6,8 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +38,7 @@ body {
   background-color: #f08080;
 }
 
-.envelope:before {
+.envelope::before {
   background-color: #f08080;
   content: "";
   position: absolute;
@@ -59,27 +54,21 @@ body {
   position: absolute;
   background-color: #eae2b7;
   width: 270px;
-  height: 190px;
+  height: 200px;
   top: 5px;
   left: 15px;
   box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
 }
 
-.section {
-  margin: auto;
-  display: flex;
-  margin-bottom: 50px;
-}
-
-.card:before {
+.card::before {
   content: "";
   position: absolute;
   border: 3px solid #003049;
   border-style: dotted;
-  width: 240px;
-  height: 165px;
-  left: 12px;
-  top: 12px;
+  width: 253px;
+  height: 178px;
+  left: 5px;
+  top: 10px;
 }
 
 .text {
@@ -88,9 +77,13 @@ body {
   font-size: 20px;
   text-align: center;
   line-height: 25px;
-  top: 19px;
-  left: 55px;
   color: #003049;
+  
+  /* Center the text horizontally and vertically */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Ensure the text container takes full width */
 }
 
 .front {
@@ -105,7 +98,7 @@ body {
   z-index: 10;
 }
 
-.front:before {
+.front::before {
   position: absolute;
   content: "";
   border-left: 300px solid #f8ad9d;
@@ -125,21 +118,20 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
-
 .shadow {
   position: absolute;
-  width: 330px;
-  height: 40px;
-  border-radius: 100%;
+  width: 324px;
+  height: 50px;
+  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
-  bottom: 23%;
+  bottom: 30%;
   animation: scale 3s linear infinite;
   z-index: -1;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: scale 3s linear infinite;
 }
 
 .gif-container {
@@ -161,36 +153,38 @@ body {
 .gif-wrapper img {
   width: 100%;
   border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
 }
 
+/* Keyframes for animations */
 @keyframes up {
-  0%,
-  10% {
-    transform: translateY(1);
-    -webkit-transform: translateY(1);
-    -moz-transform: translateY(1);
-    -ms-transform: translateY(1);
-    -o-transform: translateY(1);
+  0%, 10% {
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-30px);
-  }
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+}
 }
 
 @keyframes scale {
-  0%,
-  100% {
+  0%, 100% {
     transform: scaleX(1);
   }
   50% {
     transform: scaleX(0.85);
   }
 }
-
+@media screen and (max-width: 1024px) {
+    .gif-container {
+    width: 70%;
+  }
+  .shadow {
+    bottom: 35%;
+  }
+}
 @media screen and (max-width: 840px) {
   .gif-container {
     width: 88%;
@@ -198,17 +192,18 @@ body {
   .shadow {
     bottom: 30%;
   }
-
 }
+
 @media screen and (max-width: 430px) {
-.gif-container {
-  width: 100%;
-  bottom: 3%;
+  .gif-container {
+    width: 100%;
+  }
+  .shadow {
+    bottom: 30%;
+  }
 }
-
+@media screen and (max-width: 360px) {
   .shadow {
     bottom: 20%;
   }
-
-
 }
